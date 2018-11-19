@@ -6487,19 +6487,24 @@ vfile-message@^1.0.0:
   dependencies:
     unist-util-stringify-position "^1.1.1"
 
-vfile-reporter@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/vfile-reporter/-/vfile-reporter-5.0.0.tgz#c2bcb87a6161cbd3b41671c2aa21b8c006f4acce"
+vfile-reporter@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/vfile-reporter/-/vfile-reporter-5.1.1.tgz#419688c7e9dcaf65ba81bfdb0ad443e9e0248e09"
   dependencies:
     repeat-string "^1.5.0"
     string-width "^2.0.0"
     supports-color "^5.4.0"
     unist-util-stringify-position "^1.0.0"
+    vfile-sort "^2.1.2"
     vfile-statistics "^1.1.0"
 
 vfile-sort@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/vfile-sort/-/vfile-sort-2.1.1.tgz#03acdc8a4d7870ecf0e35499f095ddd9d14cbc41"
+
+vfile-sort@^2.1.2:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/vfile-sort/-/vfile-sort-2.1.3.tgz#2e114ab8aec2aaa71300dcc548b28d1ef9606363"
 
 vfile-statistics@^1.1.0:
   version "1.1.1"
