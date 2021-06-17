@@ -43,6 +43,39 @@ function walkComments(type, includeContext, ast, data, addComment) {
         );
       }
 
+      if (type === 'TSPropertySignature') {
+        if (path.node.type === type) {
+          // console.log(!path.parentPath || path.parentPath.parent.type);
+          // console.log(path);
+          if (
+            !path.node.leadingComments &&
+            (!path.parentPath ||
+              ['TSTypeAnnotation', 'TSArrayType'].indexOf(
+                path.parentPath.parent.type
+              ) === -1)
+          ) {
+            path.node.leadingComments = [
+              {
+                type: 'CommentBlock',
+                value: '* @instance ',
+                start: 52,
+                end: 68,
+                loc: {
+                  start: {
+                    line: Math.floor(Math.random() * 100000000),
+                    column: Math.floor(Math.random() * 100000000)
+                  },
+                  end: {
+                    line: 5,
+                    column: 18
+                  }
+                }
+              }
+            ];
+          }
+        }
+      }
+
       (path.node[type] || []).filter(isJSDocComment).forEach(parseComment);
     }
   });

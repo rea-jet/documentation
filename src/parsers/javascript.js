@@ -43,6 +43,7 @@ function parseJavaScript(data, config) {
     config.documentExported
       ? [walkExported]
       : [
+          walkComments.bind(null, 'TSPropertySignature', true),
           walkComments.bind(null, 'leadingComments', true),
           walkComments.bind(null, 'innerComments', false),
           walkComments.bind(null, 'trailingComments', false)
